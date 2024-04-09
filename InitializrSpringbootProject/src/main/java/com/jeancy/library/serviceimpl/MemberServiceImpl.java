@@ -4,11 +4,13 @@ import com.jeancy.library.model.Member;
 import com.jeancy.library.repositoty.MemberRepository;
 import com.jeancy.library.service.MemberService;
 import java.util.List;
+import org.springframework.stereotype.Service;
 
 /**
  *
  * @author Jeancy
  */
+@Service
 public class MemberServiceImpl implements MemberService{
     private final MemberRepository memberRepo;
 

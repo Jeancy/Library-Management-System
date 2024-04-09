@@ -4,11 +4,13 @@ import com.jeancy.library.model.Borrowing;
 import com.jeancy.library.repositoty.BorrowingRepository;
 import com.jeancy.library.service.BorrowingService;
 import java.util.List;
+import org.springframework.stereotype.Service;
 
 /**
  *
  * @author Jeancy
  */
+@Service
 public class BorrowingServiceImpl implements BorrowingService {
     private final BorrowingRepository borrowingRep;
 

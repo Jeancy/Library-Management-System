@@ -4,8 +4,9 @@ import com.jeancy.library.model.Author;
 import com.jeancy.library.repositoty.AuthorRepository;
 import com.jeancy.library.service.AuthorService;
 import java.util.List;
+import org.springframework.stereotype.Service;
 
-
+@Service
 public class AuthorServiceImpl implements AuthorService {
     private final AuthorRepository authorRepo;
 
