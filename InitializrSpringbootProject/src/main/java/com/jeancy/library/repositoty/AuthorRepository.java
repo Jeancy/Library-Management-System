@@ -11,7 +11,5 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public interface AuthorRepository extends JpaRepository <Author, Long>{
-     Author findAuthorByBookId(Long bookId);
-     Author findAuthorByIsbn(String isbn);
-     
+         
 }

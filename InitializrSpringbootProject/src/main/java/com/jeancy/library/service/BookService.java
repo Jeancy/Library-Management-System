@@ -2,11 +2,15 @@ package com.jeancy.library.service;
 
 import com.jeancy.library.model.Book;
 import java.util.List;
+import org.springframework.stereotype.Service;
 
 /**
  *
  * @author Jeancy
+ * 
  */
+
+@Service
 public interface BookService {
     
     // to get list of books

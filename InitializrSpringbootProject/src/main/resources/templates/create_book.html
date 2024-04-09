@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title> Library Management System </title>
+        <link rel="stylesheet" 
+             href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+            integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" 
+            crossorigin="anonymous">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body style="background-color: burlywood">
+        <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+            <!-- Brand -->
+            <a class="navbar-brand" href="#">Library Management System</a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <a class="nav-link" th:href="@{/books}">Books Management </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" th:href="@{/authors}">Authors Management </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" th:href="@{/subjects}">Members Management </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" th:href="@{/tests}">Borrowings Management </a>
+                    </li>
+                    <li class="nav-item">
+                       <a class="nav-link" th:href="@{/logregister}">Login/Register </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <br/>
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6 container justify-containt-center card">
+                    <h1 class="text-center"> Create New Book</h1>
+                    <div class="card-body">
+                        <form th:action="@{/books}" th:object = "${book}" method="POST">
+                           <div class="form-group">
+                               <label> Book Title </label>
+                               <input
+                                    type="text" 
+                                    name="Title"
+                                    th:field="*{title}"
+                                    class="form-control"
+                                    placeholder="Enter The Book Title"
+                               >
+                           </div> 
+                            <div class="form-group">
+                               <label> Book Author </label>
+                               <input
+                                    type="text" 
+                                    name="Author"
+                                    th:field="*{author}"
+                                    class="form-control"
+                                    placeholder="Enter Book Author"
+                               >
+                           </div>
+                            <div class="form-group">
+                               <label> Book ISBN </label>
+                               <input
+                                    type="text" 
+                                    name="isbn"
+                                    th:field="*{isbn}"
+                                    class="form-control"
+                                    placeholder="Enter Book ISBN"
+                               >
+                           </div>
+                            <div class="form-group">
+                               <label> Book Genre </label>
+                               <input
+                                    type="text" 
+                                    name="Genre"
+                                    th:field="*{genre}"
+                                    class="form-control"
+                                    placeholder="Enter Genre"
+                               >
+                           </div>
+                            <div class="form-group">
+                               <label> Publication Year </label>
+                               <input
+                                    type="text" 
+                                    name="Publication Year"
+                                    th:field="*{publicationYear}"
+                                    class="form-control"
+                                    placeholder="Enter Publication Year"
+                               >
+                           </div>
+                            <div class="form-group">
+                               <label> Book Availability Status </label>
+                               <input
+                                    type="text" 
+                                    name="Availability Status"
+                                    th:field="*{availabilityStatus}"
+                                    class="form-control"
+                                    placeholder="Enter Availability Status"
+                               >
+                           </div>
+                            <div class="box-footer">
+                                <button type="submit" class="btn btn-primary">
+                                      Submit
+                                </button>   
+                            </div>   
+                        </form>    
+                    </div>    
+                </div>   
+            </div>   
+        </div>
+    </body>
+</html>

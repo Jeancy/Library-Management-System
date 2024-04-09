@@ -19,14 +19,15 @@ public class Author {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "author_id")
     private Long authorId;
-    
+    @Column(name = "name")
     private String name;
     
     @Temporal(TemporalType.DATE)
     @Column(name = "birth_date")
     private Date birthDate;
-    
+    @Column(name = "nationality")
     private String nationality;
+    @Column(name = "biography")
     private String biography;
 
     // Getters and setters provided by lombok 

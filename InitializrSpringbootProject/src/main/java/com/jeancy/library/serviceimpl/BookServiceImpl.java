@@ -4,15 +4,19 @@ import com.jeancy.library.model.Book;
 import com.jeancy.library.repositoty.BookRepository;
 import com.jeancy.library.service.BookService;
 import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 /**
  *
  * @author Jeancy
  */
+@Service
 public class BookServiceImpl implements BookService {
     
     private final BookRepository bookRepo;
-
+    
+    @Autowired
     public BookServiceImpl(BookRepository bookRepo) {
         this.bookRepo = bookRepo;
     }

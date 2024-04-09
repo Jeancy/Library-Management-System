@@ -1,13 +1,14 @@
 package com.jeancy.library.service;
 
-import com.jeancy.library.model.Book;
 import com.jeancy.library.model.Member;
 import java.util.List;
+import org.springframework.stereotype.Service;
 
 /**
  *
  * @author Jeancy
  */
+@Service
 public interface MemberService {
     
     // to get list of members list

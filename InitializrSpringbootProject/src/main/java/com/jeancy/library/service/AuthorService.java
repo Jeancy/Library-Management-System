@@ -16,12 +16,6 @@ public interface AuthorService {
     Author saveAuthor(Author author);
     //getting an author based on provided id
     Author getAuthorById(Long id);
-    //getting an author based on provided book id
-    Author getAuthorByBookId(Long id);
-    
-    //getting an author based on provided book isbn
-    Author getAuthorByBookIsbn(String isbn);
-    
     //updating an author from the list
     Author updateAuthor(Author author);
     //deleting a author based on given id.

@@ -28,17 +28,6 @@ public class AuthorServiceImpl implements AuthorService {
     public Author getAuthorById(Long id) {
         return authorRepo.findById(id).get();
     }
-
-    @Override
-    public Author getAuthorByBookId(Long id) {
-        return authorRepo.findAuthorByBookId(id);
-    }
-
-    @Override
-    public Author getAuthorByBookIsbn(String isbn) {
-        return authorRepo.findAuthorByIsbn(isbn);
-    }
-
     @Override
     public Author updateAuthor(Author author) {
         return authorRepo.save(author);

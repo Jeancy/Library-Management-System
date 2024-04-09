@@ -3,11 +3,14 @@ package com.jeancy.library.service;
 import com.jeancy.library.model.Book;
 import com.jeancy.library.model.Borrowing;
 import java.util.List;
+import org.springframework.stereotype.Service;
 
 /**
  *
  * @author Jeancy
  */
+
+@Service
 public interface BorrowingService {
     // to get list of borrowings
     List<Borrowing> getAllBorrowings();

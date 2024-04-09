@@ -18,21 +18,35 @@ public class Book {
     @Column(name = "book_id")
     private Long bookId;
     
+    @Column(name = "title")
     private String title;
    
     // Many books can have the same author (many books to one author).
     @ManyToOne
     @JoinColumn(name = "author_id", referencedColumnName = "author_id")
     private Author author;
+   @Column(name = "isbn")
     private String isbn;
+    @Column(name = "genre")
     private String genre;
-    
     @Column(name = "publication_year")
     private int publicationYear;
-    
     @Column(name = "availability_status")
     private String availabilityStatus;
+    // Book contructor excluding id as it will be created automatically.
+
+    public Book() {
+    }
     
+    public Book(String title, Author author, String isbn, String genre,
+                int publicationYear, String availabilityStatus) {
+        this.title = title;
+        this.author = author;
+        this.isbn = isbn;
+        this.genre = genre;
+        this.publicationYear = publicationYear;
+        this.availabilityStatus = availabilityStatus;
+    }
     // args,non args contructors, toString Getters and setters and will be provided 
     // by lombok project
 }
