@@ -79,7 +79,6 @@ public class BookController {
     }
     
     //Create handler method to handle delete book request.
-    @GetMapping("/books/{id}") 
     @RequestMapping(value="/books/{id}", method=RequestMethod.GET)
     public String deleteBook(@PathVariable Long id){
         bookService.deleteBookById(id);
