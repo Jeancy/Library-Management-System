@@ -3,6 +3,7 @@ package com.jeancy.library.controller;
 import com.jeancy.library.model.Author;
 import com.jeancy.library.service.AuthorService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -13,6 +14,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
  *
  * @author Jeancy
  */
+// When working with Spring MVC, every controller class must
+// be annotared with @Controller
+@Controller
 public class AuthorController {
     private final AuthorService authorService;
 

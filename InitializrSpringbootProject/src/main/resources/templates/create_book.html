@@ -61,9 +61,19 @@
                                <input
                                     type="text" 
                                     name="Author"
-                                    th:field="*{author}"
+                                    th:field="*{authorName}"
                                     class="form-control"
                                     placeholder="Enter Book Author"
+                               >
+                           </div>
+                            <div class="form-group">
+                               <label> Number of Pages </label>
+                               <input
+                                    type="text" 
+                                    name="Number of Pages"
+                                    th:field="*{length}"
+                                    class="form-control"
+                                    placeholder="Enter Number of Pages"
                                >
                            </div>
                             <div class="form-group">

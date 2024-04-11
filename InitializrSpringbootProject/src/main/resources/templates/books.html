@@ -57,7 +57,8 @@
                         <th> Book Title </th>
                         <th> Author 's Name </th>
                         <th> Publication Year </th>
-                        <th> ISBN </th>
+                        <th> Book Length </th>
+                        <th> Book ISBN </th>
                         <th> Book Genre </th>
                         <th> Book Availability Status </th>
                         <th> Action </th>
@@ -66,14 +67,16 @@
                 <tbody>
                     <tr th:each= "book: ${books}">
                         <td th:text = "${book.title}"> </td>
-                        <td th:text = "${book.publicationYear}"> </td>   
+                        <td th:text = "${book.authorName}"> </td>
+                        <td th:text = "${book.publicationYear}"> </td> 
+                        <td th:text = "${book.length}"> </td>
                         <td th:text = "${book.isbn}"> </td>
                         <td th:text = "${book.genre}"> </td>
-                        <td th:text= "${book.availabilityStatus}"> </td>
+                        <td th:text = "${book.availabilityStatus}"> </td>
                         <td>
-                            <a th:href="@{/books/edit/{id}(id=${book.id})}"
+                            <a th:href="@{/books/edit/{id}(id=${book.bookId})}"
                                class = "btn btn-primary">Update</a>
-                            <a th:href="@{/books/{id}(id=${book.id})}"
+                            <a th:href="@{/books/{id}(id=${book.bookId})}"
                                class = "btn btn-danger">Delete</a>
                         </td>
                     </tr>

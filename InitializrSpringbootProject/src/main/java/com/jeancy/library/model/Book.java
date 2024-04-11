@@ -22,15 +22,25 @@ public class Book {
     private String title;
    
     // Many books can have the same author (many books to one author).
-    @ManyToOne
-    @JoinColumn(name = "author_id", referencedColumnName = "author_id")
-    private Author author;
+//    @ManyToOne
+//    @JoinColumn(name = "author_id", referencedColumnName = "author_id")
+//    private Author author;
+    
+    @Column(name = "author_name")
+    private String authorName;
+    
    @Column(name = "isbn")
     private String isbn;
+   
+    @Column(name = "length")
+    private int length;
+   
     @Column(name = "genre")
     private String genre;
+    
     @Column(name = "publication_year")
     private int publicationYear;
+    
     @Column(name = "availability_status")
     private String availabilityStatus;
     // Book contructor excluding id as it will be created automatically.
@@ -38,10 +48,11 @@ public class Book {
     public Book() {
     }
     
-    public Book(String title, Author author, String isbn, String genre,
+    public Book(String title, String authorName, int length,String isbn, String genre,
                 int publicationYear, String availabilityStatus) {
         this.title = title;
-        this.author = author;
+        this.authorName = authorName;
+        this.length = length;
         this.isbn = isbn;
         this.genre = genre;
         this.publicationYear = publicationYear;

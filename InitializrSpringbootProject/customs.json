@@ -15,6 +15,9 @@
         },
         "th:field": {
             "context": "input"
+        },
+        "th:date": {
+            "context": "td"
         }
     }
 }
